@@ -7,7 +7,10 @@ import { Types, Schema as MongooseSchema } from 'mongoose';
 
 describe('EventsService', () => {
   let service: EventsService;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7e5083d8198afbdca809d829b83ebc07c1d1917b
   const mockEvent = {
     _id: 'eventId',
     name: 'Test Event', 

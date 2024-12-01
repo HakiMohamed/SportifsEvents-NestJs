@@ -11,6 +11,10 @@ import {
     UseGuards, 
     Res 
   } from '@nestjs/common';
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 7e5083d8198afbdca809d829b83ebc07c1d1917b
   import { EventsService } from './events.service';
   import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
   import { CreateEventDto, AddParticipantDto } from './dto/event.dto';

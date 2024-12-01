@@ -8,7 +8,10 @@ import { BadRequestException, NotFoundException } from '@nestjs/common';
 describe('EventsService', () => {
   let service: EventsService;
   let model: Model<Event>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7e5083d8198afbdca809d829b83ebc07c1d1917b
   const mockEventModel = {
     find: jest.fn(),
     findOne: jest.fn(),
