@@ -1,99 +1,251 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# SportifsEvents-NestJs
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+A NestJS-based backend application for managing sports events with authentication, user management, and event organization capabilities.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 🚀 Features
 
-## Description
+- User Authentication (Sign up/Sign in)
+- JWT-based Authorization
+- User Management
+- Sports Events Management
+  - Create Events
+  - Update Event Details
+  - Delete Events
+  - List Events
+  - Event Registration
+- MongoDB Integration
+- Role-based Access Control
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 🛠️ Tech Stack
 
-## Project setup
+- **Framework:** NestJS
+- **Language:** TypeScript
+- **Database:** MongoDB with Mongoose
+- **Authentication:** JWT (JSON Web Tokens)
+- **Password Hashing:** bcryptjs
+- **API Documentation:** Swagger/OpenAPI (to be implemented)
 
-```bash
-$ npm install
-```
+## 📋 Prerequisites
 
-## Compile and run the project
+- Node.js (v14 or higher)
+- MongoDB
+- npm or yarn
 
-```bash
-# development
-$ npm run start
+## ⚙️ Installation
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Run tests
+1. Clone the repository:
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+git clone https://github.com/HakiMohamed/SportifsEvents-NestJs.git
+cd SportifsEvents-NestJs
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+2. Install dependencies:
 
 ```bash
-$ npm install -g mau
-$ mau deploy
+npm install
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+3. Set up environment variables:
 
-## Resources
+```env
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+PORT=3000
+```
 
-Check out a few resources that may come in handy when working with NestJS:
+4. Run the application:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+```bash
+# Development mode
+npm run start
 
-## Support
+# Watch mode
+npm run start:dev
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+# Production mode
+npm run start:prod
+```
 
-## Stay in touch
+## 📡 API Endpoints
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+### Authentication
 
-## License
+#### Sign Up
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+```http
+POST /auth/signup
+Content-Type: application/json
+
+{
+  "email": "user@example.com",
+  "password": "password123",
+  "username": "username"
+}
+```
+
+#### Sign In
+
+```http
+POST /auth/signin
+Content-Type: application/json
+
+{
+  "email": "user@example.com",
+  "password": "password123"
+}
+```
+
+Response:
+```json
+{
+  "user": {
+    "id": "user_id",
+    "username": "username",
+    "email": "user@example.com",
+    "roles": ["user"]
+  },
+  "access_token": "jwt_token"
+}
+```
+
+### Events
+
+#### Create Event
+
+```http
+POST /events
+Authorization: Bearer {jwt_token}
+Content-Type: application/json
+
+{
+  "title": "Football Tournament",
+  "description": "Annual football tournament",
+  "date": "2024-04-01T10:00:00Z",
+  "location": "Sports Complex",
+  "sport": "Football",
+  "maxParticipants": 20,
+  "price": 50
+}
+```
+
+#### List Events
+
+```http
+GET /events
+```
+
+#### Get Specific Event
+
+```http
+GET /events/{eventId}
+```
+
+#### Update Event
+
+```http
+PUT /events/{eventId}
+Authorization: Bearer {jwt_token}
+Content-Type: application/json
+
+{
+  "title": "Updated Football Tournament",
+  "description": "Updated description"
+  // ... other fields
+}
+```
+
+#### Delete Event
+
+```http
+DELETE /events/{eventId}
+Authorization: Bearer {jwt_token}
+```
+
+#### Register for Event
+
+```http
+POST /events/{eventId}/register
+Authorization: Bearer {jwt_token}
+```
+
+## 📂 Project Structure
+
+```
+src/
+├── auth/           # Authentication module
+│   ├── auth.controller.ts
+│   ├── auth.module.ts
+│   └── auth.service.ts
+├── users/          # Users module
+│   ├── user.model.ts
+│   └── users.module.ts
+├── events/         # Events module
+│   ├── events.controller.ts
+│   ├── events.module.ts
+│   ├── events.service.ts
+│   ├── event.model.ts
+│   └── dto/
+│       ├── create-event.dto.ts
+│       └── update-event.dto.ts
+├── app.module.ts   # Main application module
+└── main.ts         # Application entry point
+```
+
+## 🧪 Testing
+
+```bash
+# Unit tests
+npm run test
+
+# E2E tests
+npm run test:e2e
+
+# Test coverage
+npm run test:cov
+```
+
+## 📊 Event Data Model
+
+```typescript
+interface Event {
+  title: string;
+  description: string;
+  date: Date;
+  location: string;
+  sport: string;
+  maxParticipants: number;
+  organizer: User;
+  participants: User[];
+  createdAt: Date;
+  updatedAt: Date;
+}
+```
+
+## 🚧 Future Roadmap
+
+- Implement comprehensive event search and filtering
+- Add payment integration for event registration
+- Develop admin dashboard for event management
+- Implement real-time notifications for event updates
+- Create participant management features
+- Add geographical event recommendations
+- Develop mobile app companion
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+Your Name - Mohamed haki 
+
+Project Link: [https://github.com/HakiMohamed/SportifsEvents-NestJs](https://github.com/HakiMohamed/SportifsEvents-NestJs)
