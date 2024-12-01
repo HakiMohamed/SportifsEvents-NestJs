@@ -8,11 +8,7 @@ import {
     IsPhoneNumber 
   } from 'class-validator';
   import { Type } from 'class-transformer';
-  
-<<<<<<< HEAD
-=======
-  
->>>>>>> 7e5083d8198afbdca809d829b83ebc07c1d1917b
+
   export class ParticipantDto {
     @IsString()
     fullName: string;

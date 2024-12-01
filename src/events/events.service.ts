@@ -1,8 +1,3 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 7e5083d8198afbdca809d829b83ebc07c1d1917b
 // \src\events\events.service.ts
 import { Injectable, BadRequestException, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';

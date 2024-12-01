@@ -6,10 +6,6 @@ import { Document, Schema as MongooseSchema } from 'mongoose';
 export class Event extends Document {
   @Prop({ required: true })
   name: string;
-<<<<<<< HEAD
-
-=======
->>>>>>> 7e5083d8198afbdca809d829b83ebc07c1d1917b
   @Prop({ required: true })
   description: string;
 
