@@ -1,4 +1,3 @@
-// src/auth/guards/jwt-auth.guard.ts
 import { Injectable, CanActivate, ExecutionContext, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { Request } from 'express'; 
@@ -13,15 +12,15 @@ export class JwtAuthGuard implements CanActivate {
 
     if (!token) {
       throw new UnauthorizedException('No token provided');
-    }
+    } 
 
     try {
       const payload = await this.jwtService.verifyAsync(token, {
         secret: process.env.JWT_SECRET 
       });
 
-      // Optionally, you can add more payload validation here
-      request['user'] = payload; // Use bracket notation for dynamic property assignment
+      
+      request['user'] = payload; 
       return true;
     } catch (error) {
       if (error.name === 'TokenExpiredError') {

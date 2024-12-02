@@ -1,4 +1,3 @@
-// src/events/events.controller.ts
 import { 
     Controller, 
     Post, 

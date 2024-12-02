@@ -1,8 +1,7 @@
 import { 
     IsString, 
     IsDate, 
-    IsNumber, 
-    ValidateNested, 
+    IsNumber,  
     IsOptional, 
     IsEmail, 
     IsPhoneNumber 

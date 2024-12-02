@@ -1,4 +1,3 @@
-// sportifs-events-nest-js\src\auth\auth.service.ts
 import {
   Injectable,
   ConflictException,
@@ -17,9 +16,7 @@ export class AuthService {
     private jwtService: JwtService,
   ) {}
 
-  // Registration
   async signup(email: string, password: string, username: string) {
-    // Check if user already exists
     const existingUser = await this.userModel.findOne({ email });
     if (existingUser) {
       throw new ConflictException('User already exists');
@@ -59,7 +56,6 @@ export class AuthService {
       },
       access_token: await this.jwtService.signAsync(payload, {
         secret: process.env.JWT_SECRET,
-        // change the expiration time to 1 minute 
          expiresIn: '2h',
         
       }),

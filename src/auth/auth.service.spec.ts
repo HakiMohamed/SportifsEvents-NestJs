@@ -1,4 +1,3 @@
-// sportifs-events-nest-js\src\auth\auth.service.spec.ts
 import { Test, TestingModule } from '@nestjs/testing';
 import { AuthService } from './auth.service';
 import { JwtService } from '@nestjs/jwt';
@@ -66,7 +65,6 @@ describe('AuthService', () => {
 
   describe('signup', () => {
     it('should successfully create a new user', async () => {
-      // Arrange
       const email = 'test@example.com';
       const password = 'password123';
       const username = 'testuser';
@@ -78,10 +76,8 @@ describe('AuthService', () => {
         save: jest.fn().mockResolvedValue(mockUser)
       });
 
-      // Act
       const result = await authService.signup(email, password, username);
 
-      // Assert
       expect(result).toEqual({ message: 'Registration successful' });
       expect(mockUserModel.findOne).toHaveBeenCalledWith({ email });
       expect(bcrypt.hash).toHaveBeenCalledWith(password, 10);
@@ -93,11 +89,9 @@ describe('AuthService', () => {
     });
 
     it('should throw ConflictException if user already exists', async () => {
-      // Arrange
       const email = 'test@example.com';
       mockUserModel.findOne.mockResolvedValue(mockUser);
 
-      // Act & Assert
       await expect(
         authService.signup(email, 'password123', 'testuser'),
       ).rejects.toThrow(ConflictException);
@@ -106,7 +100,6 @@ describe('AuthService', () => {
 
   describe('signin', () => {
     it('should successfully sign in a user', async () => {
-      // Arrange
       const email = 'test@example.com';
       const password = 'password123';
       const accessToken = 'jwt-token';
