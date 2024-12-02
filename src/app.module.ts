@@ -8,6 +8,7 @@ import { UsersService } from './users/users.service';
 import { AuthModule } from './auth/auth.module';
 import { JwtModule } from '@nestjs/jwt';
 import { EventsModule } from './events/events.module';
+import { HelloModule } from './hello/hello.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { EventsModule } from './events/events.module';
     UsersModule,
     AuthModule,
     EventsModule,
+    HelloModule,
   ],
   controllers: [AppController],
   providers: [AppService, UsersService],
