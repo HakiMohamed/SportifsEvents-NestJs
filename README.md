@@ -4,6 +4,7 @@ A NestJS-based backend application for managing sports events with authenticatio
 
 ## 🚀 Features
 
+
 - User Authentication (Sign up/Sign in)
 - JWT-based Authorization
 - User Management
