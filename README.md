@@ -249,8 +249,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Your Name - Mohamed haki 
 
-<<<<<<< HEAD
+
 Project Link: [https://github.com/HakiMohamed/SportifsEvents-NestJs](https://github.com/HakiMohamed/SportifsEvents-NestJs)
-=======
-Project Link: [https://github.com/HakiMohamed/SportifsEvents-NestJs](https://github.com/HakiMohamed/SportifsEvents-NestJs)
->>>>>>> 1cdbf3d5ffaa55d6fe3e921088c012cc204543f0
+doc Link: [https://documenter.getpostman.com/view/32942900/2sAYBYgAVG]
