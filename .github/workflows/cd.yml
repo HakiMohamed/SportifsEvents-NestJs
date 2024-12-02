@@ -1,0 +1,22 @@
+name: CD Pipeline
+
+on:
+  push:
+    branches: ["develop"]
+  workflow_run:
+    workflows: ["CI Pipeline"]
+    types:
+      - completed
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Pull Docker image
+        run: sudo docker pull mohamedhaki/eventbackend:latest
+      - name: Delete Old docker container
+        run: sudo docker rm -f sportify-backend-container || true
+      - name: Run Docker Container
+        run: sudo docker run -d -p 3000:3000 --name sportify-backend-container mohamedhaki/eventbackend
+    
